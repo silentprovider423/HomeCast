@@ -1,0 +1,20 @@
+{
+  "sourceLanguage" : "de",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "new", "value" : "HomeCast" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "HomeCast" } }
+      }
+    },
+    "NSLocalNetworkUsageDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "new", "value" : "Verbindung zu deinem Podcast-Server im Heimnetz." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Connects to your podcast server on your home network." } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

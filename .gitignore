@@ -1,0 +1,10 @@
+build/
+build-ipa/
+DerivedData/
+Payload/
+*.xcodeproj/
+*.ipa
+.DS_Store
+*.xcresult
+# Testzugänge (nie committen)
+.test-account

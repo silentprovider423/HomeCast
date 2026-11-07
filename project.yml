@@ -1,0 +1,90 @@
+name: HomeCast
+options:
+  bundleIdPrefix: org.homeroll
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+  developmentLanguage: de
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+targets:
+  HomeCast:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Resources
+        buildPhase: resources
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDisplayName: HomeCast
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, de]
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIBackgroundModes: [audio, fetch]
+        NSLocalNetworkUsageDescription: "Verbindung zu deinem Podcast-Server im Heimnetz."
+        CFBundleURLTypes:
+          - CFBundleURLName: org.homeroll.homecast
+            CFBundleURLSchemes: [homecast]
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+          NSAllowsArbitraryLoadsForMedia: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.homeroll.homecast
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+
+  HomeCastTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: HomeCast
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.homeroll.homecast.tests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/HomeCast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HomeCast
+        BUNDLE_LOADER: $(TEST_HOST)
+
+  HomeCastUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: HomeCast
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.homeroll.homecast.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: HomeCast
+
+schemes:
+  HomeCast:
+    build:
+      targets:
+        HomeCast: all
+        HomeCastTests: [test]
+        HomeCastUITests: [test]
+    test:
+      targets:
+        - HomeCastTests
+        - HomeCastUITests
+      gatherCoverageData: false
