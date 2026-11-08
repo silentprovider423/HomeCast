@@ -2737,6 +2737,22 @@
         }
       }
     },
+    "Verbindung wird hergestellt …": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbindung wird hergestellt …"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecting…"
+          }
+        }
+      }
+    },
     "Version": {
       "localizations": {
         "de": {

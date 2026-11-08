@@ -7,6 +7,7 @@ struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var busy = false
+    @State private var retrying = false
     @State private var error: String?
     @FocusState private var focus: Field?
 
@@ -47,6 +48,7 @@ struct LoginView: View {
                     .background(.fill.quaternary, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
 
                     if let error { Text(error).font(.footnote).foregroundStyle(.red).multilineTextAlignment(.center) }
+                    if retrying { Text("Verbindung wird hergestellt …").font(.footnote).foregroundStyle(.secondary) }
 
                     Button { Task { await login() } } label: {
                         if busy { ProgressView().frame(maxWidth: .infinity) } else { Text("Anmelden").font(.headline).frame(maxWidth: .infinity) }
@@ -69,9 +71,15 @@ struct LoginView: View {
         while s.hasSuffix("/") { s.removeLast() }
         guard let url = URL(string: s), url.host() != nil else { error = String(localized: "Ungültige Serveradresse."); return }
         busy = true
-        defer { busy = false }
+        error = nil
+        defer { busy = false; retrying = false }
+        let user = username.trimmingCharacters(in: .whitespaces), pw = password
         do {
-            let acc = try await PinePodsClient.login(server: url, username: username.trimmingCharacters(in: .whitespaces), password: password)
+            // Verbindungsfehler (z. B. während iOS nach dem lokalen Netzwerk fragt) nach 2, 5, 15 s wiederholen;
+            // falsches Passwort kommt sofort als Fehler zurück.
+            let acc = try await ConnectionRetry.run(onRetry: { _ in retrying = true }) {
+                try await PinePodsClient.login(server: url, username: user, password: pw)
+            }
             password = ""
             library.login(acc)
         } catch {

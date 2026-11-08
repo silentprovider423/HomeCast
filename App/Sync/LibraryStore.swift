@@ -48,6 +48,9 @@ final class LibraryStore {
     var demo = false
 
     @ObservationIgnored private var flushing = false
+    /// Wartezeiten der automatischen Neuversuche nach einem Verbindungsfehler (Tests setzen kürzere)
+    @ObservationIgnored var retryDelays: [Double] = ConnectionRetry.defaultDelays
+    @ObservationIgnored private var retryTask: Task<Void, Never>?
 
     var client: PinePodsClient? { account.map { PinePodsClient(account: $0) } }
     var isLoggedIn: Bool { account != nil || demo }
@@ -107,9 +110,28 @@ final class LibraryStore {
             saveSnapshot()
         } catch {
             isOffline = APIError.isOffline(error)
+            // offline: kein Dialog, nur der dezente Status (OfflineBanner) – und selbst neu versuchen
             lastError = isOffline ? nil : error.localizedDescription
+            if isOffline { scheduleRetries() }
         }
     }
+
+    /// Nach einem Verbindungsfehler automatisch neu abgleichen (2, 5, 15 s), z. B. beim ersten Start,
+    /// solange iOS noch nach dem lokalen Netzwerk fragt.
+    private func scheduleRetries() {
+        guard retryTask == nil else { return }
+        let delays = retryDelays
+        retryTask = Task { [weak self] in
+            for delay in delays {
+                await RetryWaker.shared.wait(seconds: delay)
+                guard !Task.isCancelled, let self, self.isOffline else { break }
+                await self.refresh()
+                if !self.isOffline { break }
+            }
+            self?.retryTask = nil
+        }
+    }
+
 
     /// Folgen einer abonnierten Sendung laden (erste Seite oder weitere)
     func loadEpisodes(showID: Int, more: Bool = false, oldestFirst: Bool = false) async -> Int {

@@ -34,7 +34,7 @@ struct HomeCastApp: App {
             if env["HOMECAST_DEMO_PLAYER"] == "1", let e = lib.inProgress.first { p.showDemo(e, chapters: DemoData.chapters) }
         } else if let s = env["HOMECAST_SERVER"].flatMap(URL.init(string:)), let key = env["HOMECAST_API_KEY"], !key.isEmpty {
             Task { @MainActor in
-                if let acc = try? await PinePodsClient.account(server: s, apiKey: key) {
+                if let acc = try? await ConnectionRetry.run({ try await PinePodsClient.account(server: s, apiKey: key) }) {
                     lib.login(acc)
                     // HOMECAST_AUTOPLAY=1: nach dem Abgleich eine Folge mit Cover abspielen (Absturz-/Hintergrundtest)
                     if env["HOMECAST_AUTOPLAY"] == "1" {
@@ -61,6 +61,8 @@ struct HomeCastApp: App {
         .onChange(of: phase) { _, new in
             switch new {
             case .active:
+                // weckt laufende Neuversuche (Login/Abgleich), z. B. nach dem Dialog zum lokalen Netzwerk
+                RetryWaker.shared.wake()
                 Task { await library.refresh() }
                 DownloadManager.shared.cleanupPlayed()
             case .background:
