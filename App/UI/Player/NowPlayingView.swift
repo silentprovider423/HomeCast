@@ -36,8 +36,10 @@ struct NowPlayingView: View {
             }
         }
         .environment(\.colorScheme, .dark)
-        .task(id: player.episode?.artworkURL) {
-            guard let u = player.episode?.artworkURL, let img = await ImageLoader.shared.image(u), let c = ImageLoader.averageColor(img) else { return }
+        .task(id: player.episode?.id) {
+            guard let u = player.episode?.artworkURL, let img = await ImageLoader.shared.image(u), let c = ImageLoader.averageColor(img) else {
+                withAnimation { tint = Artwork.placeholderColor(player.episode?.showTitle ?? "") }; return
+            }
             withAnimation { tint = Color(c) }
         }
         .sheet(item: $panel) { p in
@@ -168,7 +170,7 @@ struct NowPlayingView: View {
                 if !player.chapters.isEmpty {
                     roundButton("list.bullet", label: "Kapitel", id: "chapters-button") { panel = .chapters }
                 }
-                roundButton("list.triangle", label: "Als Nächstes", id: "queue-button") { panel = .queue }
+                roundButton("text.line.first.and.arrowtriangle.forward", label: "Als Nächstes", id: "queue-button") { panel = .queue }
             }
         }
     }

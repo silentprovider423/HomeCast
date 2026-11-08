@@ -15,7 +15,9 @@ if missing:
     print("Fehlende Übersetzungen:"); [print("  " + json.dumps(k, ensure_ascii=False)) for k in missing]; sys.exit(1)
 strings = {}
 for k in sorted(keys):
-    strings[k] = {"localizations": {"en": {"stringUnit": {"state": "translated", "value": tr[k]}}}}
+    # „de“ ausdrücklich eintragen, damit ein de.lproj entsteht (sonst fiele das deutsche iPhone auf Englisch zurück)
+    strings[k] = {"localizations": {"de": {"stringUnit": {"state": "translated", "value": k}},
+                                    "en": {"stringUnit": {"state": "translated", "value": tr[k]}}}}
 out = {"sourceLanguage": "de", "strings": strings, "version": "1.0"}
 json.dump(out, open(os.path.join(root, "Resources/Localizable.xcstrings"), "w"), ensure_ascii=False, indent=2, sort_keys=True)
 unused = sorted(set(tr) - keys)

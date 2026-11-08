@@ -33,7 +33,7 @@ targets:
         CFBundleLocalizations: [en, de]
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
-        UIBackgroundModes: [audio, fetch]
+        UIBackgroundModes: [audio]
         NSLocalNetworkUsageDescription: "Verbindung zu deinem Podcast-Server im Heimnetz."
         CFBundleURLTypes:
           - CFBundleURLName: org.homeroll.homecast

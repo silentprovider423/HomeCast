@@ -116,7 +116,9 @@ struct ShowView: View {
         .refreshable { await load(refreshFeed: true) }
         .task { await load(refreshFeed: false) }
         .task(id: current.artworkURL) {
-            guard let u = current.artworkURL, let img = await ImageLoader.shared.image(u), let c = ImageLoader.averageColor(img) else { return }
+            guard let u = current.artworkURL, let img = await ImageLoader.shared.image(u), let c = ImageLoader.averageColor(img) else {
+                tint = Artwork.placeholderColor(current.title); return
+            }
             tint = Color(c)
         }
         .alert("Fehler", isPresented: Binding(get: { error != nil }, set: { if !$0 { error = nil } })) {

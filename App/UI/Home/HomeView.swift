@@ -80,7 +80,6 @@ struct HomeView: View {
                 LazyHStack(alignment: .top, spacing: 14) {
                     ForEach(episodes) { e in
                         EpisodeCard(episode: e, label: label ?? (e.isInProgress ? "Fortsetzen" : nil))
-                            .frame(width: 230)
                             .contextMenu {
                                 EpisodeMenuItems(episode: e)
                                 Button { library.hideFromUpNext(e) } label: { Label("Aus „Als Nächstes“ entfernen", systemImage: "eye.slash") }

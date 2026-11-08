@@ -52,17 +52,27 @@ final class DownloadManager: NSObject {
         }
         // Laufende Hintergrund-Downloads nach App-Neustart wieder aufnehmen
         for s in [session, wifiSession] {
-            s.getAllTasks { tasks in
-                Task { @MainActor in
-                    for case let t as URLSessionDownloadTask in tasks {
-                        guard let key = t.taskDescription else { continue }
-                        self.tasks[key] = t
-                        self.progress[key] = self.progress[key] ?? 0
-                        if let ep = self.pendingEpisodes[key] { self.active[key] = ep }
-                    }
+            Self.restoreTasks(s) { tasks in
+                for t in tasks {
+                    guard let key = t.taskDescription else { continue }
+                    self.tasks[key] = t
+                    self.progress[key] = self.progress[key] ?? 0
+                    if let ep = self.pendingEpisodes[key] { self.active[key] = ep }
                 }
             }
         }
+    }
+
+    /// URLSession ruft den Block auf einer Hintergrund-Queue auf: außerhalb des MainActors erzeugen
+    nonisolated private static func restoreTasks(_ s: URLSession, _ apply: @escaping @MainActor ([URLSessionDownloadTask]) -> Void) {
+        s.getAllTasks { tasks in
+            let downloads = tasks.compactMap { $0 as? URLSessionDownloadTask }
+            Task { @MainActor in apply(downloads) }
+        }
+    }
+
+    nonisolated private static func cancelKeepingData(_ t: URLSessionDownloadTask, _ apply: @escaping @MainActor (Data?) -> Void) {
+        t.cancel { data in Task { @MainActor in apply(data) } }
     }
 
     private func makeSession(cellular: Bool) -> URLSession {
@@ -125,7 +135,7 @@ final class DownloadManager: NSObject {
 
     func pause(_ e: Episode) {
         guard let t = tasks[e.id] else { return }
-        t.cancel { data in Task { @MainActor in self.resumeData[e.id] = data } }
+        Self.cancelKeepingData(t) { data in self.resumeData[e.id] = data }
         tasks[e.id] = nil
         paused.insert(e.id)
     }

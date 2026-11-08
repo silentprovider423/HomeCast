@@ -191,8 +191,9 @@ final class LibraryStore {
         var c = current(e); c.queued = true
         if next { queue.insert(c, at: 0) } else { queue.append(c) }
         mutate(e) { $0.queued = true }
+        // PinePods fügt neue Einträge vorne ein; für „Zuletzt wiedergeben“ danach die Reihenfolge setzen
         send(.enqueue(id: id))
-        if next { send(.bump(id: id)) }
+        if next { send(.bump(id: id)) } else { send(.reorder(ids: queue.compactMap(\.serverID))) }
     }
 
     func removeFromQueue(_ e: Episode) {

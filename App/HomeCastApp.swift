@@ -32,7 +32,14 @@ struct HomeCastApp: App {
             if env["HOMECAST_DEMO_PLAYER"] == "1", let e = lib.inProgress.first { p.showDemo(e, chapters: DemoData.chapters) }
         } else if let s = env["HOMECAST_SERVER"].flatMap(URL.init(string:)), let key = env["HOMECAST_API_KEY"], !key.isEmpty {
             Task { @MainActor in
-                if let acc = try? await PinePodsClient.account(server: s, apiKey: key) { lib.login(acc) }
+                if let acc = try? await PinePodsClient.account(server: s, apiKey: key) {
+                    lib.login(acc)
+                    // HOMECAST_AUTOPLAY=1: nach dem Abgleich eine Folge mit Cover abspielen (Absturz-/Hintergrundtest)
+                    if env["HOMECAST_AUTOPLAY"] == "1" {
+                        for _ in 0..<60 where lib.recent.isEmpty { try? await Task.sleep(for: .seconds(1)) }
+                        if let e = lib.continueListening.first ?? lib.recent.first { p.play(e) }
+                    }
+                }
             }
         }
         #endif

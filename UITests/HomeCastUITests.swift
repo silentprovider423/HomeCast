@@ -20,6 +20,8 @@ final class HomeCastUITests: XCTestCase {
             app.launchEnvironment["HOMECAST_API_KEY"] = k
         }
         app.launch()
+        // Anmeldung per API-Schlüssel läuft asynchron: auf die Tab-Leiste warten
+        XCTAssertTrue(app.tabBars.firstMatch.waitForExistence(timeout: 90), "Tab-Leiste erscheint nach der Anmeldung")
         return app
     }
 
@@ -75,9 +77,6 @@ final class HomeCastUITests: XCTestCase {
         pp.tap() // anhalten
         app.swipeDown(velocity: .fast)
 
-        // Folge öffnen, sichern und wieder entsichern
-        let row = app.collectionViews.buttons.matching(NSPredicate(format: "label CONTAINS[c] %@", "Wiedergabe")).firstMatch
-        _ = row
         app.tabBars.buttons["Startseite"].tap()
         XCTAssertTrue(app.navigationBars["Startseite"].waitForExistence(timeout: 10))
         XCTAssertTrue(app.otherElements["shelf-continue"].waitForExistence(timeout: 20) || app.scrollViews["shelf-continue"].exists,
@@ -85,7 +84,8 @@ final class HomeCastUITests: XCTestCase {
 
         // Entdecken: Charts
         app.tabBars.buttons["Neu"].tap()
-        XCTAssertTrue(app.staticTexts["Top-Sendungen"].waitForExistence(timeout: 30))
+        XCTAssertTrue(app.staticTexts["Kategorien"].waitForExistence(timeout: 30))
+        XCTAssertTrue(app.staticTexts["Top-Sendungen"].waitForExistence(timeout: 60), "Charts aus Apples öffentlichem Feed")
 
         // Suche
         app.tabBars.buttons.element(boundBy: 3).tap()
@@ -151,7 +151,7 @@ final class HomeCastUITests: XCTestCase {
         _ = app.navigationBars.firstMatch.waitForExistence(timeout: 5)
         app.navigationBars.buttons["Library"].tap()
         app.tabBars.buttons["Home"].tap()
-        let queue = app.buttons["Up Next"].firstMatch
+        let queue = app.buttons["Queue"].firstMatch
         if queue.waitForExistence(timeout: 5) { queue.tap(); shot(app, "5-queue") }
     }
 }

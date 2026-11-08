@@ -15,6 +15,6 @@ xcrun simctl boot "$UDID" 2>/dev/null || true
 xcrun simctl install "$UDID" "$APP"
 SIMCTL_CHILD_HOMECAST_SERVER="${HOMECAST_SERVER:-}" SIMCTL_CHILD_HOMECAST_API_KEY="${HOMECAST_API_KEY:-}" \
 SIMCTL_CHILD_HOMECAST_DEMO="${HOMECAST_DEMO:-}" SIMCTL_CHILD_HOMECAST_DEMO_PLAYER="${HOMECAST_DEMO_PLAYER:-}" \
-SIMCTL_CHILD_HOMECAST_RESET="${HOMECAST_RESET:-}" \
+SIMCTL_CHILD_HOMECAST_RESET="${HOMECAST_RESET:-}" SIMCTL_CHILD_HOMECAST_AUTOPLAY="${HOMECAST_AUTOPLAY:-}" \
   xcrun simctl launch --terminate-running-process "$UDID" org.homeroll.homecast >/dev/null
 echo "gestartet auf $SIM ($UDID)"

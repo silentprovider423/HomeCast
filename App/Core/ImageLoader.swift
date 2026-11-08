@@ -103,6 +103,11 @@ struct Artwork: View {
         .accessibilityHidden(true)
     }
 
+    /// Farbe des erzeugten Platzhalters (Hintergrund von Karten/Player, wenn es kein Cover gibt)
+    static func placeholderColor(_ title: String) -> Color {
+        Color(hue: Double(abs(title.stableHash) % 360) / 360, saturation: 0.6, brightness: 0.6)
+    }
+
     /// Erzeugter Platzhalter (auch für Demodaten ohne Cover)
     struct Placeholder: View {
         let title: String

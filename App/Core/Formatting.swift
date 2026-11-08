@@ -86,12 +86,13 @@ enum ShowNotes {
 
     /// Zeitmarken (1:02:03 / 12:34) in den Shownotes finden (Analyse #15 „Ab Zeitmarke wiedergeben“)
     static func timestamps(in text: String) -> [(range: Range<String.Index>, seconds: TimeInterval)] {
-        guard let re = try? Regex(#"(?<![\d:])(\d{1,2}:)?\d{1,2}:\d{2}(?![\d:])"#) else { return [] }
-        return text.matches(of: re).compactMap { m in
-            let s = String(text[m.range])
-            let parts = s.split(separator: ":").compactMap { Double($0) }
+        // NSRegularExpression, weil Swift-Regex keine Lookbehinds kann
+        guard let re = try? NSRegularExpression(pattern: #"(?<![\d:])(\d{1,2}:)?\d{1,2}:\d{2}(?![\d:])"#) else { return [] }
+        return re.matches(in: text, range: NSRange(text.startIndex..., in: text)).compactMap { m in
+            guard let r = Range(m.range, in: text) else { return nil }
+            let parts = text[r].split(separator: ":").compactMap { Double($0) }
             guard parts.count >= 2, parts.last! < 60 else { return nil }
-            return (m.range, parts.reduce(0) { $0 * 60 + $1 })
+            return (r, parts.reduce(0) { $0 * 60 + $1 })
         }
     }
 

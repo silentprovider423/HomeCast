@@ -4,7 +4,7 @@ import XCTest
 /// Tests gegen ein echtes PinePods-Testkonto.
 /// Zugang über die Umgebung (nie im Code):  TEST_RUNNER_PODCAST_SERVER, TEST_RUNNER_PODCAST_API_KEY,
 /// TEST_RUNNER_PODCAST_USER, TEST_RUNNER_PODCAST_PASSWORD (xcodebuild reicht TEST_RUNNER_-Variablen ohne Präfix durch).
-final class PinePodsClientTests: XCTestCase {
+@MainActor final class PinePodsClientTests: XCTestCase {
     private var env: [String: String] { ProcessInfo.processInfo.environment }
 
     private func client() async throws -> PinePodsClient {
@@ -51,7 +51,8 @@ final class PinePodsClientTests: XCTestCase {
         let newest = try XCTUnwrap(p1.episodes.first?.pubDate), older = try XCTUnwrap(p2.episodes.first?.pubDate)
         XCTAssertGreaterThan(newest, older)
         let oldest = try await c.episodes(podcastID: id, limit: 1, oldestFirst: true)
-        XCTAssertLessThan(try XCTUnwrap(oldest.episodes.first?.pubDate), older)
+        let oldestDate = try XCTUnwrap(oldest.episodes.first?.pubDate)
+        XCTAssertLessThan(oldestDate, older)
         let recent = try await c.recentEpisodes(limit: 20)
         XCTAssertFalse(recent.isEmpty)
         XCTAssertNotNil(recent.first?.showServerID)
@@ -72,7 +73,8 @@ final class PinePodsClientTests: XCTestCase {
 
     func testCompletedRoundTrip() async throws {
         let c = try await client()
-        let id = try XCTUnwrap(try await anyEpisode(c, show: "Invisible").serverID)
+        let ep = try await anyEpisode(c, show: "Invisible")
+        let id = try XCTUnwrap(ep.serverID)
         try await c.setCompleted(id, true)
         let done = try await c.episodeMetadata(id)
         XCTAssertEqual(done?.completed, true)
@@ -83,7 +85,8 @@ final class PinePodsClientTests: XCTestCase {
 
     func testSavedRoundTrip() async throws {
         let c = try await client()
-        let id = try XCTUnwrap(try await anyEpisode(c, show: "Syntax").serverID)
+        let ep = try await anyEpisode(c, show: "Syntax")
+        let id = try XCTUnwrap(ep.serverID)
         try await c.setSaved(id, true)
         let saved = try await c.saved().map(\.serverID)
         XCTAssertTrue(saved.contains(id))
@@ -102,9 +105,10 @@ final class PinePodsClientTests: XCTestCase {
         try await c.clearQueue()
         let empty = try await c.queue()
         XCTAssertTrue(empty.isEmpty)
+        // PinePods fügt ohne laufende Folge vorne ein (wie „Als Nächstes“)
         for id in ids { try await c.enqueue(id) }
         let q1 = try await c.queue().compactMap(\.serverID)
-        XCTAssertEqual(q1, ids)
+        XCTAssertEqual(q1, ids.reversed())
         try await c.reorderQueue([ids[2], ids[0], ids[1]])
         let q2 = try await c.queue().compactMap(\.serverID)
         XCTAssertEqual(q2, [ids[2], ids[0], ids[1]])
@@ -116,7 +120,7 @@ final class PinePodsClientTests: XCTestCase {
         XCTAssertFalse(q4.contains(ids[0]))
         // Ausgangszustand wiederherstellen
         try await c.clearQueue()
-        for id in before { try await c.enqueue(id) }
+        for id in before.reversed() { try await c.enqueue(id) }
     }
 
     func testFollowAndUnfollow() async throws {
@@ -138,7 +142,8 @@ final class PinePodsClientTests: XCTestCase {
     func testChaptersFromServer() async throws {
         let c = try await client()
         let e = try await anyEpisode(c, show: "Lage der Nation")
-        let ch = try await c.chapters(episodeID: try XCTUnwrap(e.serverID))
+        let eid = try XCTUnwrap(e.serverID)
+        let ch = try await c.chapters(episodeID: eid)
         XCTAssertGreaterThan(ch.count, 2, "Lage der Nation liefert Kapitel")
         XCTAssertEqual(ch.first?.start, 0)
         XCTAssertEqual(ch.map(\.start), ch.map(\.start).sorted())
@@ -146,7 +151,8 @@ final class PinePodsClientTests: XCTestCase {
 
     func testPlaybackSpeedPerShow() async throws {
         let c = try await client()
-        let sid = try XCTUnwrap(try await c.shows().first?.serverID)
+        let all = try await c.shows()
+        let sid = try XCTUnwrap(all.first?.serverID)
         try await c.setShowSpeed(1.5, podcastID: sid)
         let d = try await c.playDetails(podcastID: sid)
         XCTAssertEqual(d.speed, 1.5)
@@ -170,7 +176,7 @@ final class PinePodsClientTests: XCTestCase {
     }
 
     /// Ohne Netz landen Aktionen in der Warteschlange und werden nachgesendet
-    @MainActor func testOfflineQueueAndFlush() async throws {
+    func testOfflineQueueAndFlush() async throws {
         let real = try await client()
         let e = try await anyEpisode(real, show: "Freakonomics")
         let id = try XCTUnwrap(e.serverID)

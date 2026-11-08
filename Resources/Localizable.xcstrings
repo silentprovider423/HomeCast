@@ -3,6 +3,12 @@
   "strings": {
     "%@ · %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -13,6 +19,12 @@
     },
     "%lld": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -23,6 +35,12 @@
     },
     "%lld Folgen · %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Folgen · %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -33,6 +51,12 @@
     },
     "%lld Minuten": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Minuten"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -43,6 +67,12 @@
     },
     "%lld Sek. vor": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Sek. vor"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -53,6 +83,12 @@
     },
     "%lld Sek. zurück": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Sek. zurück"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -63,6 +99,12 @@
     },
     "%lld Sekunden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Sekunden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -73,6 +115,12 @@
     },
     "1 Stunde": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Stunde"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -83,6 +131,12 @@
     },
     "Abbrechen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -93,6 +147,12 @@
     },
     "Abmelden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abmelden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -103,6 +163,12 @@
     },
     "Abmelden?": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abmelden?"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -113,6 +179,12 @@
     },
     "AirPlay": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AirPlay"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -123,6 +195,12 @@
     },
     "Aktualisieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -133,6 +211,12 @@
     },
     "Aktualisierungsdatum": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisierungsdatum"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -143,6 +227,12 @@
     },
     "Alle Downloads entfernen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Downloads entfernen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -153,6 +243,12 @@
     },
     "Alle Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -163,6 +259,12 @@
     },
     "Alle Podcasts": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Podcasts"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -173,6 +275,12 @@
     },
     "Alle abbrechen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle abbrechen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -183,6 +291,12 @@
     },
     "Alle als gespielt markieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle als gespielt markieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -193,6 +307,12 @@
     },
     "Alle als ungespielt markieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle als ungespielt markieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -203,6 +323,12 @@
     },
     "Als Nächstes": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als Nächstes"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -213,6 +339,12 @@
     },
     "Als Nächstes wiedergeben": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als Nächstes wiedergeben"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -223,6 +355,12 @@
     },
     "Als gespielt markieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als gespielt markieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -233,6 +371,12 @@
     },
     "Als ungespielt markieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als ungespielt markieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -243,6 +387,12 @@
     },
     "Altersfreigabe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altersfreigabe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -253,6 +403,12 @@
     },
     "Anbieter": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anbieter"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -263,6 +419,12 @@
     },
     "Angesagte Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angesagte Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -273,6 +435,12 @@
     },
     "Anhalten": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anhalten"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -283,6 +451,12 @@
     },
     "Anmelden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anmelden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -291,8 +465,30 @@
         }
       }
     },
+    "Anzahl Folgen": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anzahl Folgen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Episodes"
+          }
+        }
+      }
+    },
     "Aus Warteliste entfernen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Warteliste entfernen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -303,6 +499,12 @@
     },
     "Aus „Als Nächstes“ entfernen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus „Als Nächstes“ entfernen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -313,6 +515,12 @@
     },
     "Ausstehende Änderungen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausstehende Änderungen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -323,6 +531,12 @@
     },
     "Bei mehr als 200 MB fragen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bei mehr als 200 MB fragen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -333,6 +547,12 @@
     },
     "Beim Sichern laden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim Sichern laden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -343,6 +563,12 @@
     },
     "Belegt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Belegt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -353,6 +579,12 @@
     },
     "Benutzer": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benutzer"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -363,6 +595,12 @@
     },
     "Benutzername": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benutzername"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -373,6 +611,12 @@
     },
     "Benutzername oder Passwort falsch.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benutzername oder Passwort falsch."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -383,6 +627,12 @@
     },
     "Bildung": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bildung"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -393,6 +643,12 @@
     },
     "Charts nicht verfügbar": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charts nicht verfügbar"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -403,6 +659,12 @@
     },
     "Comedy": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comedy"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -413,6 +675,12 @@
     },
     "Darstellung": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Darstellung"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -423,6 +691,12 @@
     },
     "Deine Podcasts, synchronisiert über deinen eigenen PinePods-Server.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Podcasts, synchronisiert über deinen eigenen PinePods-Server."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -433,6 +707,12 @@
     },
     "Deine Sendungen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Sendungen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -443,6 +723,12 @@
     },
     "Demo": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -453,6 +739,12 @@
     },
     "Die Sendung wird aus deiner Mediathek entfernt.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Sendung wird aus deiner Mediathek entfernt."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -463,6 +755,12 @@
     },
     "Die Warteliste ist leer. Wähle bei einer Folge „Als Nächstes wiedergeben“ oder „Zuletzt wiedergeben“.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Warteliste ist leer. Wähle bei einer Folge „Als Nächstes wiedergeben“ oder „Zuletzt wiedergeben“."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -473,6 +771,12 @@
     },
     "Download abbrechen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download abbrechen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -483,6 +787,12 @@
     },
     "Download anhalten": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download anhalten"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -493,6 +803,12 @@
     },
     "Download entfernen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download entfernen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -503,6 +819,12 @@
     },
     "Download fortsetzen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download fortsetzen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -513,6 +835,12 @@
     },
     "Downloads": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloads"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -523,6 +851,12 @@
     },
     "Du bist nicht mit einem WLAN verbunden.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du bist nicht mit einem WLAN verbunden."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -533,6 +867,12 @@
     },
     "Eigens für diese Sendung": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eigens für diese Sendung"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -543,6 +883,12 @@
     },
     "Einstellungen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -553,6 +899,12 @@
     },
     "Erneut versuchen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erneut versuchen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -563,6 +915,12 @@
     },
     "Erste Folge": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erste Folge"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -573,6 +931,12 @@
     },
     "Explizit": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explizit"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -583,6 +947,12 @@
     },
     "Externe Steuerelemente": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Externe Steuerelemente"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -593,6 +963,12 @@
     },
     "Fehler": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -603,6 +979,12 @@
     },
     "Fernsehen und Film": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fernsehen und Film"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -613,6 +995,12 @@
     },
     "Fertig": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fertig"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -623,6 +1011,12 @@
     },
     "Filter": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -633,6 +1027,12 @@
     },
     "Folge": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folge"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -643,6 +1043,12 @@
     },
     "Folge Sendungen im Tab „Neu“ oder über die Suche. Neue Folgen erscheinen dann hier.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folge Sendungen im Tab „Neu“ oder über die Suche. Neue Folgen erscheinen dann hier."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -653,6 +1059,12 @@
     },
     "Folge teilen …": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folge teilen …"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -663,6 +1075,12 @@
     },
     "Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -673,6 +1091,12 @@
     },
     "Fortsetzen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fortsetzen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -683,6 +1107,12 @@
     },
     "Freizeit": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Freizeit"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -693,6 +1123,12 @@
     },
     "Gefolgt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gefolgt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -703,6 +1139,12 @@
     },
     "Gefolgt am": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gefolgt am"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -713,6 +1155,12 @@
     },
     "Gehörte Folgen erscheinen hier.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gehörte Folgen erscheinen hier."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -723,6 +1171,12 @@
     },
     "Geladen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geladen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -733,6 +1187,12 @@
     },
     "Geladene Folgen bleiben auf dem iPhone.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geladene Folgen bleiben auf dem iPhone."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -743,6 +1203,12 @@
     },
     "Geladene Folgen kannst du ohne Internetverbindung hören.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geladene Folgen kannst du ohne Internetverbindung hören."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -753,6 +1219,12 @@
     },
     "Geschichte": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geschichte"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -763,6 +1235,12 @@
     },
     "Gesellschaft und Kultur": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesellschaft und Kultur"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -773,6 +1251,12 @@
     },
     "Gesichert": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesichert"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -783,6 +1267,12 @@
     },
     "Gesicherte Folgen erscheinen hier.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesicherte Folgen erscheinen hier."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -793,6 +1283,12 @@
     },
     "Gespielt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespielt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -803,6 +1299,12 @@
     },
     "Gespielte Downloads entfernen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespielte Downloads entfernen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -813,6 +1315,12 @@
     },
     "Gespielte Folgen ausblenden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespielte Folgen ausblenden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -823,6 +1331,12 @@
     },
     "Gespielte Folgen werden 24 Stunden nach dem Anhören vom iPhone gelöscht.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespielte Folgen werden 24 Stunden nach dem Anhören vom iPhone gelöscht."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -833,6 +1347,12 @@
     },
     "Gestern": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gestern"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -843,6 +1363,12 @@
     },
     "Gesundheit und Fitness": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesundheit und Fitness"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -853,6 +1379,12 @@
     },
     "Gib die RSS-Feed-Adresse der Sendung ein.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gib die RSS-Feed-Adresse der Sendung ein."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -863,6 +1395,12 @@
     },
     "Heute": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heute"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -873,6 +1411,12 @@
     },
     "Immer erlauben": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immer erlauben"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -883,6 +1427,12 @@
     },
     "Immer fragen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immer fragen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -893,6 +1443,12 @@
     },
     "In der Mediathek suchen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In der Mediathek suchen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -903,6 +1459,12 @@
     },
     "Info": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Info"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -913,6 +1475,12 @@
     },
     "Jetzt läuft": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jetzt läuft"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -923,6 +1491,12 @@
     },
     "Jetzt synchronisieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jetzt synchronisieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -933,6 +1507,12 @@
     },
     "Kapitel": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapitel"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -943,6 +1523,12 @@
     },
     "Kapitel %lld": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapitel %lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -953,6 +1539,12 @@
     },
     "Kategorie": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kategorie"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -963,6 +1555,12 @@
     },
     "Kategorien": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kategorien"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -973,6 +1571,12 @@
     },
     "Kategorien durchsuchen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kategorien durchsuchen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -983,6 +1587,12 @@
     },
     "Keine Ergebnisse": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Ergebnisse"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -993,6 +1603,12 @@
     },
     "Keine Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1003,6 +1619,12 @@
     },
     "Keine Sendungen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Sendungen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1013,6 +1635,12 @@
     },
     "Keine geladenen Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine geladenen Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1023,6 +1651,12 @@
     },
     "Keine passenden Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine passenden Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1033,6 +1667,12 @@
     },
     "Kinder und Familie": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kinder und Familie"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1043,6 +1683,12 @@
     },
     "Kontinuierliche Wiedergabe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontinuierliche Wiedergabe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1053,6 +1699,12 @@
     },
     "Konto": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konto"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1063,6 +1715,12 @@
     },
     "Kunst": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kunst"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1073,6 +1731,12 @@
     },
     "Laden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1083,6 +1747,12 @@
     },
     "Leeren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leeren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1093,6 +1763,12 @@
     },
     "Link kopieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link kopieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1103,6 +1779,12 @@
     },
     "Liste": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liste"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1113,6 +1795,12 @@
     },
     "Löschen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1123,6 +1811,12 @@
     },
     "Mediathek": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mediathek"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1133,6 +1827,12 @@
     },
     "Mediathek synchronisieren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mediathek synchronisieren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1143,6 +1843,12 @@
     },
     "Mobilfunkdownloads": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mobilfunkdownloads"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1153,6 +1859,12 @@
     },
     "Musik": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Musik"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1163,6 +1875,12 @@
     },
     "Nach dem Ende einer Folge wird automatisch die nächste aus der Warteliste gespielt.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach dem Ende einer Folge wird automatisch die nächste aus der Warteliste gespielt."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1173,6 +1891,12 @@
     },
     "Nachrichten": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nachrichten"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1183,6 +1907,12 @@
     },
     "Neu": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1193,6 +1923,12 @@
     },
     "Neue Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neue Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1203,6 +1939,12 @@
     },
     "Neue Folgen deiner Sendungen erscheinen hier.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neue Folgen deiner Sendungen erscheinen hier."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1213,6 +1955,12 @@
     },
     "Neueste Folge": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neueste Folge"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1223,6 +1971,12 @@
     },
     "Neueste Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neueste Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1233,6 +1987,12 @@
     },
     "Neueste zuerst": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neueste zuerst"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1243,6 +2003,12 @@
     },
     "Nicht mehr folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1253,6 +2019,12 @@
     },
     "Nicht mehr folgen und entfernen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr folgen und entfernen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1263,6 +2035,12 @@
     },
     "Nicht mehr folgen?": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr folgen?"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1273,6 +2051,12 @@
     },
     "Nicht mehr sichern": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr sichern"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1283,6 +2067,12 @@
     },
     "Nicht sichern": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht sichern"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1293,6 +2083,12 @@
     },
     "Nichts wird abgespielt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nichts wird abgespielt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1303,6 +2099,12 @@
     },
     "Noch %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1313,6 +2115,12 @@
     },
     "Noch kein Server? Eine Anleitung zum Einrichten von PinePods mit Docker steht in der Dokumentation (docs/SETUP.md).": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch kein Server? Eine Anleitung zum Einrichten von PinePods mit Docker steht in der Dokumentation (docs/SETUP.md)."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1323,6 +2131,12 @@
     },
     "Nächste/Vorherige": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nächste/Vorherige"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1333,6 +2147,12 @@
     },
     "OK": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1343,6 +2163,12 @@
     },
     "Offline": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offline"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1353,6 +2179,12 @@
     },
     "Offline – %lld Änderungen warten": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offline – %lld Änderungen warten"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1363,6 +2195,12 @@
     },
     "Passwort": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passwort"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1373,6 +2211,12 @@
     },
     "Quellcode und Hilfe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quellcode und Hilfe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1383,6 +2227,12 @@
     },
     "Raster": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raster"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1393,6 +2243,12 @@
     },
     "Schlaf-Timer": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schlaf-Timer"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1403,6 +2259,12 @@
     },
     "Sendung per URL folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sendung per URL folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1413,6 +2275,12 @@
     },
     "Sendung per URL folgen …": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sendung per URL folgen …"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1423,6 +2291,12 @@
     },
     "Sendung teilen …": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sendung teilen …"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1433,6 +2307,12 @@
     },
     "Sendung öffnen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sendung öffnen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1443,6 +2323,12 @@
     },
     "Sendungen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sendungen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1453,6 +2339,12 @@
     },
     "Sendungen, Folgen und mehr": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sendungen, Folgen und mehr"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1463,6 +2355,12 @@
     },
     "Server": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Server"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1473,6 +2371,12 @@
     },
     "Serveradresse (z. B. http://192.168.1.10:8040)": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serveradresse (z. B. http://192.168.1.10:8040)"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1483,6 +2387,12 @@
     },
     "Serverfehler %lld: %@": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serverfehler %lld: %@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1493,6 +2403,12 @@
     },
     "Sichern": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sichern"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1503,6 +2419,12 @@
     },
     "Sortieren nach": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren nach"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1513,6 +2435,12 @@
     },
     "Sport": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sport"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1523,6 +2451,12 @@
     },
     "Später über WLAN": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Später über WLAN"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1533,6 +2467,12 @@
     },
     "Staffel %lld, Folge %lld": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Staffel %lld, Folge %lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1543,6 +2483,12 @@
     },
     "Standardtempo": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standardtempo"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1553,6 +2499,12 @@
     },
     "Startseite": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Startseite"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1563,6 +2515,12 @@
     },
     "Suchen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suchen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1573,6 +2531,12 @@
     },
     "Tasten zum Überspringen gelten auch für Sperrbildschirm und Kopfhörer. Bei „Nächste/Vorherige“ springen Kopfhörer- und Autotasten zuerst zwischen Kapiteln.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tasten zum Überspringen gelten auch für Sperrbildschirm und Kopfhörer. Bei „Nächste/Vorherige“ springen Kopfhörer- und Autotasten zuerst zwischen Kapiteln."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1583,6 +2547,12 @@
     },
     "Technologie": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Technologie"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1593,6 +2563,12 @@
     },
     "Tempo": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1603,6 +2579,12 @@
     },
     "Timer ausschalten": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Timer ausschalten"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1613,6 +2595,12 @@
     },
     "Titel": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1623,6 +2611,12 @@
     },
     "Top-Sendungen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Top-Sendungen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1633,6 +2627,12 @@
     },
     "Topergebnis": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Topergebnis"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1643,6 +2643,12 @@
     },
     "True Crime": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "True Crime"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1653,6 +2659,12 @@
     },
     "Unerwartete Antwort vom Server (%@).": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unerwartete Antwort vom Server (%@)."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1663,6 +2675,12 @@
     },
     "Ungespielt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ungespielt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1673,6 +2691,12 @@
     },
     "Ungültige Adresse.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ungültige Adresse."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1683,6 +2707,12 @@
     },
     "Ungültige Serveradresse.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ungültige Serveradresse."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1693,6 +2723,12 @@
     },
     "Unter dieser Adresse wurde kein Podcast-Feed gefunden.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unter dieser Adresse wurde kein Podcast-Feed gefunden."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1703,6 +2739,12 @@
     },
     "Version": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1713,6 +2755,12 @@
     },
     "Vorspringen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorspringen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1723,6 +2771,12 @@
     },
     "Vorwärts/Zurück": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorwärts/Zurück"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1733,6 +2787,12 @@
     },
     "Warteliste": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warteliste"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1743,6 +2803,12 @@
     },
     "Warteliste leeren": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warteliste leeren"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1753,6 +2819,12 @@
     },
     "Warteliste leeren?": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warteliste leeren?"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1763,6 +2835,12 @@
     },
     "Warteliste: %lld Folgen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warteliste: %lld Folgen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1773,6 +2851,12 @@
     },
     "Website der Sendung": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Website der Sendung"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1783,6 +2867,12 @@
     },
     "Weitere Aktionen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Aktionen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1793,6 +2883,12 @@
     },
     "Weitere Folgen laden": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Folgen laden"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1803,6 +2899,12 @@
     },
     "Weiterhören": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiterhören"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1813,6 +2915,12 @@
     },
     "Wenn Folge endet": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wenn Folge endet"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1823,6 +2931,12 @@
     },
     "Wenn Kapitel endet": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wenn Kapitel endet"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1833,6 +2947,12 @@
     },
     "Wiedergabe": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiedergabe"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1843,6 +2963,12 @@
     },
     "Wiedergabeposition": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiedergabeposition"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1853,6 +2979,12 @@
     },
     "Wiedergabetempo": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiedergabetempo"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1863,6 +2995,12 @@
     },
     "Willkommen bei HomeCast": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Willkommen bei HomeCast"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1873,6 +3011,12 @@
     },
     "Wird geladen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird geladen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1883,6 +3027,12 @@
     },
     "Wirtschaft": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wirtschaft"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1893,6 +3043,12 @@
     },
     "Wissenschaft": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wissenschaft"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1903,6 +3059,12 @@
     },
     "Zuletzt aktualisiert": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt aktualisiert"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1913,6 +3075,12 @@
     },
     "Zuletzt gespielt": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt gespielt"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1923,6 +3091,12 @@
     },
     "Zuletzt gesucht": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt gesucht"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1933,6 +3107,12 @@
     },
     "Zuletzt synchronisiert": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt synchronisiert"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1943,6 +3123,12 @@
     },
     "Zuletzt wiedergeben": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt wiedergeben"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1953,6 +3139,12 @@
     },
     "Zur Sendung": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zur Sendung"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1963,6 +3155,12 @@
     },
     "Zurückspringen": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurückspringen"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1973,6 +3171,12 @@
     },
     "Zwei-Faktor-Anmeldung wird noch nicht unterstützt.": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zwei-Faktor-Anmeldung wird noch nicht unterstützt."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1983,6 +3187,12 @@
     },
     "https://…/feed.xml": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://…/feed.xml"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -1993,6 +3203,12 @@
     },
     "·": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "·"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -2003,6 +3219,12 @@
     },
     "Älteste zuerst": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Älteste zuerst"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -2013,6 +3235,12 @@
     },
     "Über": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -2023,6 +3251,12 @@
     },
     "Über Mobilfunk laden?": {
       "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über Mobilfunk laden?"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",

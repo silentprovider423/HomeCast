@@ -94,6 +94,7 @@ struct EpisodeRow: View {
             }
             .padding(.vertical, 6)
         }
+        .navigationLinkIndicatorVisibility(.hidden)
         .buttonStyle(.plain)
         .contextMenu { EpisodeMenuItems(episode: e) }
         .swipeActions(edge: .leading) {
@@ -120,6 +121,8 @@ struct EpisodeRow: View {
 /// Kapsel-Knopf „▶ 45 Min.“ / „▶ Noch 12 Min.“ mit Fortschritt
 struct PlayPill: View {
     let episode: Episode
+    /// Auf farbigen Karten weiß statt Akzentfarbe
+    var onCard = false
     @Environment(PlayerController.self) private var player
 
     var body: some View {
@@ -132,14 +135,14 @@ struct PlayPill: View {
                 Image(systemName: playing ? "pause.fill" : "play.fill").font(.caption2)
                 if episode.isInProgress || isCurrent {
                     ProgressView(value: isCurrent && player.duration > 0 ? player.currentTime / player.duration : episode.progress)
-                        .progressViewStyle(.linear).frame(width: 28).tint(.accentColor)
+                        .progressViewStyle(.linear).frame(width: 28).tint(onCard ? .white : .accentColor)
                 }
                 Text(isCurrent ? Fmt.remaining(max(0, player.duration - player.currentTime)) : Fmt.episodeMeta(episode))
                     .font(.caption.weight(.semibold)).monospacedDigit()
             }
             .padding(.horizontal, 10).padding(.vertical, 5)
-            .background(.fill.tertiary, in: Capsule())
-            .foregroundStyle(Color.accentColor)
+            .background(onCard ? AnyShapeStyle(.white.opacity(0.22)) : AnyShapeStyle(.fill.tertiary), in: Capsule())
+            .foregroundStyle(onCard ? Color.white : Color.accentColor)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(Text(playing ? "Anhalten" : "Wiedergabe"))
@@ -171,6 +174,7 @@ struct StatusIcons: View {
 struct EpisodeCard: View {
     let episode: Episode
     var label: LocalizedStringKey? = nil
+    var width: CGFloat = 230
     @Environment(LibraryStore.self) private var library
     @State private var tint: Color = .gray
 
@@ -178,17 +182,17 @@ struct EpisodeCard: View {
         let e = library.current(episode)
         NavigationLink(value: Route.episode(e)) {
             VStack(alignment: .leading, spacing: 0) {
-                Artwork(url: e.artworkURL, corner: 0, title: e.showTitle)
-                    .frame(maxWidth: .infinity)
+                Artwork(url: e.artworkURL, size: width, corner: 0, title: e.showTitle)
                 VStack(alignment: .leading, spacing: 4) {
                     if let label { Text(label).font(.caption2.weight(.semibold)).textCase(.uppercase).foregroundStyle(.white.opacity(0.75)) }
                     Text(e.title).font(.subheadline.weight(.semibold)).lineLimit(2).foregroundStyle(.white)
                     Text(e.showTitle).font(.caption).lineLimit(1).foregroundStyle(.white.opacity(0.75))
                     Spacer(minLength: 4)
-                    PlayPill(episode: e).environment(\.colorScheme, .dark)
+                    PlayPill(episode: e, onCard: true)
                 }
                 .padding(12)
-                .frame(maxWidth: .infinity, minHeight: 118, alignment: .topLeading)
+                .frame(width: width, alignment: .topLeading)
+                .frame(minHeight: 118, alignment: .top)
                 .background(tint.gradient)
             }
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -196,7 +200,9 @@ struct EpisodeCard: View {
         }
         .buttonStyle(.plain)
         .task(id: e.artworkURL) {
-            guard let u = e.artworkURL, let img = await ImageLoader.shared.image(u), let c = ImageLoader.averageColor(img) else { return }
+            guard let u = e.artworkURL, let img = await ImageLoader.shared.image(u), let c = ImageLoader.averageColor(img) else {
+                tint = Artwork.placeholderColor(e.showTitle); return
+            }
             tint = Color(c).mix(with: .black, by: 0.25)
         }
     }

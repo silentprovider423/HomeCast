@@ -101,10 +101,16 @@ final class PlayerController {
         Task { await loadExtras(for: ep, explicitStart: start != nil) }
     }
 
+    /// Außerhalb des MainActors gebaut: iOS ruft den Block auf einem Hintergrund-Thread auf
+    /// (sonst Absturz in der Swift-6-Isolationsprüfung, sobald der Sperrbildschirm das Cover holt).
+    nonisolated private static func makeArtwork(_ img: UIImage) -> MPMediaItemArtwork {
+        MPMediaItemArtwork(boundsSize: img.size) { _ in img }
+    }
+
     /// Kapitel, Server-Position und Tempo nachladen
     private func loadExtras(for ep: Episode, explicitStart: Bool) async {
         if let url = ep.artworkURL, let img = await ImageLoader.shared.image(url) {
-            artwork = MPMediaItemArtwork(boundsSize: img.size) { _ in img }
+            artwork = Self.makeArtwork(img)
             updateNowPlaying()
         }
         if let client = library?.client, let id = ep.serverID {
@@ -288,14 +294,23 @@ final class PlayerController {
         endObserver = NotificationCenter.default.addObserver(forName: AVPlayerItem.didPlayToEndTimeNotification, object: item, queue: .main) { [weak self] _ in
             MainActor.assumeIsolated { self?.didFinish() }
         }
-        statusObs = item.observe(\.status) { [weak self] it, _ in
+        // KVO meldet auf beliebigen Threads: Beobachter außerhalb des MainActors erzeugen (sonst Isolations-Absturz)
+        statusObs = Self.observeStatus(item) { [weak self] failed, msg in if failed { self?.errorMessage = msg; self?.isPlaying = false } }
+        bufferObs = Self.observeBuffering(player) { [weak self] waiting in self?.isBuffering = waiting }
+    }
+
+    nonisolated private static func observeStatus(_ item: AVPlayerItem, _ apply: @escaping @MainActor (Bool, String?) -> Void) -> NSKeyValueObservation {
+        item.observe(\.status) { it, _ in
             let failed = it.status == .failed
             let msg = it.error?.localizedDescription
-            Task { @MainActor in if failed { self?.errorMessage = msg; self?.isPlaying = false } }
+            Task { @MainActor in apply(failed, msg) }
         }
-        bufferObs = player.observe(\.timeControlStatus) { [weak self] p, _ in
+    }
+
+    nonisolated private static func observeBuffering(_ player: AVPlayer, _ apply: @escaping @MainActor (Bool) -> Void) -> NSKeyValueObservation {
+        player.observe(\.timeControlStatus) { p, _ in
             let waiting = p.timeControlStatus == .waitingToPlayAtSpecifiedRate
-            Task { @MainActor in self?.isBuffering = waiting }
+            Task { @MainActor in apply(waiting) }
         }
     }
 

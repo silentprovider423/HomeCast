@@ -25,12 +25,16 @@ struct LibraryView: View {
                 }
             }
             if !recentlyUpdated.isEmpty {
+                Text("Zuletzt aktualisiert").font(.title2.bold())
+                    .listRowSeparator(.hidden)
+                    .padding(.top, 16)
                 Section {
                     LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 18) {
                         ForEach(recentlyUpdated) { s in
                             NavigationLink(value: Route.show(s)) {
                                 ShowTile(show: s, subtitle: s.newestEpisodeDate.map { Fmt.date($0) })
                             }
+                            .navigationLinkIndicatorVisibility(.hidden)
                             .buttonStyle(.plain)
                             .contextMenu { ShowMenuItems(show: s) }
                         }
@@ -38,8 +42,6 @@ struct LibraryView: View {
                     .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
-                } header: {
-                    Text("Zuletzt aktualisiert").font(.title2.bold()).foregroundStyle(.primary).textCase(nil)
                 }
             }
         }
