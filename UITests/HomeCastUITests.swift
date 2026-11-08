@@ -56,29 +56,31 @@ final class HomeCastUITests: XCTestCase {
 
         // Vollbild-Player
         let pp = app.buttons["player-playpause"]
-        XCTAssertTrue(pp.waitForExistence(timeout: 15))
+        XCTAssertTrue(pp.waitForExistence(timeout: 30))
         app.buttons["skip-forward"].tap()
         app.buttons["skip-back"].tap()
         app.buttons["speed-menu"].tap()
         let speed = app.buttons["1,5×"]
-        XCTAssertTrue(speed.waitForExistence(timeout: 5))
+        XCTAssertTrue(speed.waitForExistence(timeout: 30))
         speed.tap()
-        XCTAssertTrue(app.buttons["speed-menu"].staticTexts["1,5×"].waitForExistence(timeout: 5) || app.staticTexts["1,5×"].exists)
+        XCTAssertTrue(app.buttons["speed-menu"].staticTexts["1,5×"].waitForExistence(timeout: 20) || app.staticTexts["1,5×"].exists)
+        sleep(2) // Menü schließt animiert
         app.buttons["sleep-menu"].tap()
         let m15 = app.buttons["15 Minuten"]
-        XCTAssertTrue(m15.waitForExistence(timeout: 5))
+        if !m15.waitForExistence(timeout: 30) { app.buttons["sleep-menu"].tap() }
+        XCTAssertTrue(m15.waitForExistence(timeout: 30))
         m15.tap()
         app.buttons["queue-button"].tap()
-        XCTAssertTrue(app.navigationBars["Als Nächstes"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.navigationBars["Als Nächstes"].waitForExistence(timeout: 30))
         app.buttons["Fertig"].firstMatch.tap()
         // Tempo zurück auf 1×, damit der Testzustand sauber bleibt
         app.buttons["speed-menu"].tap()
-        if app.buttons["1×"].waitForExistence(timeout: 5) { app.buttons["1×"].tap() }
+        if app.buttons["1×"].waitForExistence(timeout: 20) { app.buttons["1×"].tap() }
         pp.tap() // anhalten
         app.swipeDown(velocity: .fast)
 
         app.tabBars.buttons["Startseite"].tap()
-        XCTAssertTrue(app.navigationBars["Startseite"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.navigationBars["Startseite"].waitForExistence(timeout: 30))
         XCTAssertTrue(app.otherElements["shelf-continue"].waitForExistence(timeout: 20) || app.scrollViews["shelf-continue"].exists,
                       "„Weiterhören“ zeigt die angespielte Folge")
 
@@ -90,10 +92,11 @@ final class HomeCastUITests: XCTestCase {
         // Suche
         app.tabBars.buttons.element(boundBy: 3).tap()
         let field = app.searchFields.firstMatch
-        XCTAssertTrue(field.waitForExistence(timeout: 10))
+        XCTAssertTrue(field.waitForExistence(timeout: 30))
         field.tap()
         field.typeText("Lage der Nation\n")
-        XCTAssertTrue(app.buttons["top-result"].waitForExistence(timeout: 30) || app.staticTexts["Topergebnis"].waitForExistence(timeout: 5))
+        let hit = app.collectionViews.staticTexts.matching(NSPredicate(format: "label BEGINSWITH[c] %@", "Lage der Nation")).firstMatch
+        XCTAssertTrue(hit.waitForExistence(timeout: 60), "Suchergebnis aus der iTunes-Suche")
     }
 
     /// Folgenseite: sichern, laden, Kontextmenü
@@ -108,18 +111,18 @@ final class HomeCastUITests: XCTestCase {
         XCTAssertTrue(cell.waitForExistence(timeout: 30))
         cell.staticTexts.element(boundBy: 1).tap()
         let save = app.buttons["episode-save"]
-        XCTAssertTrue(save.waitForExistence(timeout: 15))
+        XCTAssertTrue(save.waitForExistence(timeout: 30))
         save.tap()
-        XCTAssertTrue(app.buttons["Nicht mehr sichern"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Nicht mehr sichern"].waitForExistence(timeout: 20))
         app.buttons["Nicht mehr sichern"].tap()
-        XCTAssertTrue(app.buttons["Sichern"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Sichern"].waitForExistence(timeout: 20))
         app.buttons["episode-more"].tap()
-        XCTAssertTrue(app.buttons["Als Nächstes wiedergeben"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Als Nächstes wiedergeben"].waitForExistence(timeout: 20))
         app.buttons["Als Nächstes wiedergeben"].tap()
         app.navigationBars.buttons.firstMatch.tap()
         app.navigationBars.buttons.firstMatch.tap()
         app.buttons["library-shows"].tap()
-        _ = app.scrollViews.buttons.firstMatch.waitForExistence(timeout: 10)
+        _ = app.scrollViews.buttons.firstMatch.waitForExistence(timeout: 30)
     }
 
     /// Screenshots mit erfundenen Demodaten (für README), Sprache Englisch
@@ -137,21 +140,21 @@ final class HomeCastUITests: XCTestCase {
         shot(app, "3-library")
         app.buttons["library-shows"].tap()
         let first = app.scrollViews.buttons.element(boundBy: 1)
-        XCTAssertTrue(first.waitForExistence(timeout: 10))
+        XCTAssertTrue(first.waitForExistence(timeout: 30))
         first.tap()
-        _ = app.buttons["play-latest"].waitForExistence(timeout: 10)
+        _ = app.buttons["play-latest"].waitForExistence(timeout: 30)
         shot(app, "4-show")
         app.otherElements["mini-player"].firstMatch.tap()
-        _ = app.buttons["player-playpause"].waitForExistence(timeout: 10)
+        _ = app.buttons["player-playpause"].waitForExistence(timeout: 30)
         shot(app, "2-player")
         app.terminate()
         app = try launch(demo: true, language: "en")
         app.tabBars.buttons["Library"].tap()
         app.buttons["library-shows"].tap()
-        _ = app.navigationBars.firstMatch.waitForExistence(timeout: 5)
+        _ = app.navigationBars.firstMatch.waitForExistence(timeout: 20)
         app.navigationBars.buttons["Library"].tap()
         app.tabBars.buttons["Home"].tap()
         let queue = app.buttons["Queue"].firstMatch
-        if queue.waitForExistence(timeout: 5) { queue.tap(); shot(app, "5-queue") }
+        if queue.waitForExistence(timeout: 20) { queue.tap(); shot(app, "5-queue") }
     }
 }

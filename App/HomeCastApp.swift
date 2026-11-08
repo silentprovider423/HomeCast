@@ -23,6 +23,8 @@ struct HomeCastApp: App {
         }
         #endif
         let lib = LibraryStore()
+        // Als Host der Unit-Tests nichts abgleichen (die Tests bringen ihr eigenes Konto mit)
+        if env["XCTestConfigurationFilePath"] != nil { lib.account = nil }
         let p = PlayerController()
         p.library = lib
         #if DEBUG

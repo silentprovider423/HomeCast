@@ -167,10 +167,13 @@ struct PinePodsClient: Sendable {
 
     // MARK: Fortschritt & Status
 
+    /// Position melden. `record_listen_duration` nimmt nur größere Werte an (Hörzeit-Statistik, gpodder),
+    /// `record_podcast_history` setzt die Position exakt – nötig, wenn zurückgespult wurde.
     func recordPosition(episodeID: Int, position: TimeInterval, duration: TimeInterval?) async throws {
         var body: [String: Any] = ["episode_id": episodeID, "user_id": userID, "listen_duration": position.rounded(), "is_youtube": false]
         body["episode_duration"] = duration.map { $0 as Any } ?? NSNull()
         try await postIgnoring("record_listen_duration", body)
+        try await postIgnoring("record_podcast_history", ["episode_id": episodeID, "user_id": userID, "episode_pos": position.rounded(), "is_youtube": false])
     }
 
     func setCompleted(_ episodeID: Int, _ completed: Bool) async throws {

@@ -71,11 +71,19 @@ struct CatalogClient: Sendable {
         if !query.isEmpty { c.queryItems = query.map { URLQueryItem(name: $0.key, value: $0.value) } }
         guard let url = c.url else { throw APIError.badURL }
         var req = URLRequest(url: url)
-        req.timeoutInterval = 20
-        let (data, resp) = try await session.data(for: req)
-        let code = (resp as? HTTPURLResponse)?.statusCode ?? 0
-        guard code == 200 else { throw APIError.http(code, url.host() ?? "") }
-        return data
+        req.timeoutInterval = 25
+        // ein zweiter Versuch bei Zeitüberschreitung (Apples Feeds antworten gelegentlich langsam)
+        for attempt in 0..<2 {
+            do {
+                let (data, resp) = try await session.data(for: req)
+                let code = (resp as? HTTPURLResponse)?.statusCode ?? 0
+                guard code == 200 else { throw APIError.http(code, url.host() ?? "") }
+                return data
+            } catch let e as URLError where e.code == .timedOut && attempt == 0 {
+                continue
+            }
+        }
+        throw URLError(.timedOut)
     }
 }
 

@@ -65,6 +65,10 @@ import XCTest
         try await c.recordPosition(episodeID: id, position: 321, duration: e.duration)
         let meta = try await c.episodeMetadata(id)
         XCTAssertEqual(meta?.position, 321)
+        // zurückspulen muss ebenfalls ankommen
+        try await c.recordPosition(episodeID: id, position: 120, duration: e.duration)
+        let back = try await c.episodeMetadata(id)
+        XCTAssertEqual(back?.position, 120)
         let hist = try await c.history(limit: 20)
         XCTAssertTrue(hist.contains { $0.serverID == id })
         let home = try await c.home()
