@@ -143,7 +143,7 @@ tools/          icon generator, string catalog generator
 
 ## License
 
-[MIT](LICENSE). Third-party: PinePods (GPL-3.0) is not included – HomeCast only talks to its HTTP API.
+[GPL-3.0](LICENSE) (GNU General Public License v3.0; releases up to this change were published under MIT). Third-party: PinePods (GPL-3.0) is not included – HomeCast only talks to its HTTP API.
 
 ---
 
